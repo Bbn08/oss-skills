@@ -1,17 +1,33 @@
-## This following repo is a collection of skills which i use for my open source contributions.
+## OSS Skills
 
-### These skills will work for both claude and codex or any other coding harness you use!
+This repo contains Claude slash commands and agent skills for open source
+contribution workflows.
 
-### How to use:
+### Install
 
-``` bash
-# clone this repo 
-$ git clone https://github.com/mugiwaraluffy56/oss-skills.git
+```bash
+git clone https://github.com/mugiwaraluffy56/oss-skills.git
+cd oss-skills
 
-# run the install.sh script
-$ chmod +x install.sh
-$ ./install.sh
-
-# and you are good to go
-# just use the /<skill-name> in the chatbox and prompt required arguments for the skill
+chmod +x install.sh
+./install.sh
 ```
+
+The installer copies:
+
+- Claude slash commands from `commands/*.md` to `~/.claude/commands`
+- Claude skills from `*/SKILL.md` to `~/.claude/skills`
+- Codex-compatible skills from `*/SKILL.md` to `~/.agents/skills`
+
+### Usage
+
+In Claude Code, use the commands with `/`:
+
+```text
+/create-pr add a failing test for issue #123 and fix it
+/comment-pr https://github.com/org/repo/pull/123 say I pushed the requested change
+/lfx-research-architect issue: <upstream_issue_url> project: <lfx_project_page_url>
+```
+
+In Codex or other skill-aware agents, invoke them by skill name in chat instead
+of relying on `/` command discovery.
