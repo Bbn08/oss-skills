@@ -11,4 +11,7 @@ $ git clone https://github.com/mugiwaraluffy56/oss-skills.git
 # run the install.sh script
 $ chmod +x install.sh
 $ ./install.sh
+
+# and you are good to go
+# just use the /<skill-name> in the chatbox and prompt required arguments for the skill
 ```
